@@ -1,0 +1,24 @@
+syntax = "proto3";
+package com.example.grpc;
+
+service TextService {
+
+  rpc SendText(TextMessage) returns (OKResponse);
+
+  rpc GetText(GetTextRequest) returns (AllMessages);
+
+}
+
+message TextMessage {
+  string text = 1;
+}
+
+message OKResponse {
+  string text = 1;
+}
+
+message GetTextRequest {}
+
+message AllMessages{
+  repeated string message = 1;
+}
