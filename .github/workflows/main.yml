@@ -1,0 +1,13 @@
+name: Actions-basics
+
+on: [pull_request, push]
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+    - name: messageIsDelivered_test
+      run: echo "first test"
+      
+    - name: messagesSaveOrder_test
+      run: echo "Second test"
